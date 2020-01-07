@@ -1,8 +1,17 @@
 version: 2
+
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.0.1
+
+workflows:
+  main:
+    jobs:
+      - build:
+          context: SonarCloud
+  
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:7.10
 
     steps:
@@ -27,6 +36,8 @@ jobs:
       - run:
           name: Run tests
           command: JEST_JUNIT_OUTPUT_DIR=test-reports npm test
+
+      - sonarcloud/scan
 
       - store_test_results:
           path: "./test-reports/"
