@@ -74,6 +74,6 @@ const getContexts = (token) => {
     return get('/contexts', options);
 };
 
-const api = { getContexts, login };
+const api = { get, getContexts, login, post };
 
 export default api;
