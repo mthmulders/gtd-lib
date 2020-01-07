@@ -26,4 +26,10 @@ jobs:
 
       - run:
           name: Run tests
-          command: npm test
+          command: JEST_JUNIT_OUTPUT_DIR=test-reports npm test
+
+      - store_test_results:
+          path: "./test-reports/"
+      - store_artifacts:
+          destination: "test-reports/unit-test"
+          path: "./test-reports/"
