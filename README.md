@@ -16,7 +16,7 @@ Update package.json with the following and run `npm i` afterwards.
 
 ```json
 "dependencies" {
-    "gtd-lib": "0.0.3"
+    "gtd-lib": "0.0.5"
 }
 ```
 
