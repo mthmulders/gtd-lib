@@ -158,7 +158,7 @@ module.exports = {
   // testRegex: [],
 
   // This option allows the use of a custom results processor
-  testResultsProcessor: 'jest-sonar-reporter',
+  // testResultsProcessor: null,
 
   // This option allows use of a custom test runner
   // testRunner: "jasmine2",
