@@ -16,21 +16,21 @@ Update package.json with the following and run `npm i` afterwards.
 
 ```json
 "dependencies" {
-    "gtd-lib": "0.0.1"
+    "gtd-lib": "0.0.3"
 }
 ```
 
 ### Import the library
 
 ```js
-import api from 'gtd-lib';
+import gtd from 'gtd-lib';
 ```
 
 ### Use the library
 
 ```js
 const getContexts = async () => {
-    const token = await api.login('username', 's3cr3t-p455w0rd');
-    const contexts = await api.getContexts(token);
+    const token = await gtd.login('username', 's3cr3t-p455w0rd');
+    const contexts = await gtd.getContexts(token);
     return contexts;
 }
