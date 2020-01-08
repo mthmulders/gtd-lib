@@ -71,3 +71,39 @@ describe('getContexts()', () => {
         });
     });
 });
+
+describe('getTasksForContext()', () => {
+    afterEach(() => {
+        fetchMock.restore();
+    });
+    
+    it('should GET /contexts/{whatever}/tasks', (done) => {
+        // Arrange
+        const contextId = 'foo-bar-baz';
+        const tasks = [{ text: 'Example'}];
+        fetchMock.get(`/contexts/${contextId}/tasks`, { body: JSON.stringify(tasks), status: 200 });
+
+        // Act
+        api.getTasksForContext('token', contextId).then((result) => {
+            // Assert
+            expect(result).toEqual(tasks);
+            done();
+        });
+    });
+
+    it('should should pass the authorization token', (done) => {
+        // Arrange
+        const token = '.t.o.k.e.n.';
+        const contextId = 'foo-bar-baz';
+        const tasks = [{ text: 'Example'}];
+        fetchMock.get(`/contexts/${contextId}/tasks`, { body: JSON.stringify(tasks), status: 200 });
+
+        // Act
+        api.getTasksForContext(token, contextId).then((result) => {
+            // Assert
+            const request = fetchMock.lastOptions();
+            expect(request.headers['Authorization']).toContain(token);
+            done();
+        });
+    });
+});

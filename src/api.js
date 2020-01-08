@@ -29,6 +29,15 @@ const getContexts = (token) => {
     return helpers.get('/contexts', options);
 };
 
-const api = { getContexts, login };
+const getTasksForContext = (token, contextId) => {
+    const options = {
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    };
+    return helpers.get(`/contexts/${contextId}/tasks`, options);
+}
+
+const api = { getContexts, getTasksForContext, login };
 
 export default api;

@@ -29,8 +29,13 @@ import gtd from 'gtd-lib';
 ### Use the library
 
 ```js
+const token = await gtd.login('username', 's3cr3t-p455w0rd');
+
 const getContexts = async () => {
-    const token = await gtd.login('username', 's3cr3t-p455w0rd');
-    const contexts = await gtd.getContexts(token);
-    return contexts;
+    return await gtd.getContexts(token);
 }
+
+const getTasks = async (contextId) => {
+    return await gtd.getTasksForContext(token, contextId);
+}
+```
