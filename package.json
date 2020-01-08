@@ -16,7 +16,8 @@
   "scripts": {
     "build": "babel src -d build --ignore \"src/__tests__/*\"",
     "package": "npm run build && cp package.json LICENSE README.md build/ && npm pack build/",
-    "test": "jest"
+    "test": "jest --watch",
+    "test:ci": "jest"
   },
   "repository": {
     "type": "git",
