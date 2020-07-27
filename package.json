@@ -9,7 +9,7 @@
     "babel-jest": "26.1.0",
     "fetch-mock": "9.10.5",
     "jest": "26.1.0",
-    "jest-junit": "11.0.1",
+    "jest-junit": "11.1.0",
     "node-fetch": "2.6.0"
   },
   "main": "src/index.js",
