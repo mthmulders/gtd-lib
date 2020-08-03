@@ -6,7 +6,7 @@
     "@babel/cli": "7.10.5",
     "@babel/core": "7.11.0",
     "@babel/preset-env": "7.11.0",
-    "babel-jest": "26.2.1",
+    "babel-jest": "26.2.2",
     "fetch-mock": "9.10.5",
     "jest": "26.2.2",
     "jest-junit": "11.1.0",
