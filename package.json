@@ -7,7 +7,7 @@
     "@babel/core": "7.11.0",
     "@babel/preset-env": "7.11.0",
     "babel-jest": "26.2.2",
-    "fetch-mock": "9.10.5",
+    "fetch-mock": "9.10.6",
     "jest": "26.2.2",
     "jest-junit": "11.1.0",
     "node-fetch": "2.6.0"
