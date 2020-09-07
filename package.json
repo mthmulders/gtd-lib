@@ -10,7 +10,7 @@
     "fetch-mock": "9.10.7",
     "jest": "26.4.2",
     "jest-junit": "11.1.0",
-    "node-fetch": "2.6.0"
+    "node-fetch": "2.6.1"
   },
   "main": "src/index.js",
   "scripts": {
